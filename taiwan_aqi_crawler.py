@@ -7,6 +7,7 @@ Created on Wed Jan 24 22:42:03 2018
 """
 
 from bs4 import BeautifulSoup
+from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.support.ui import Select
 
@@ -74,7 +75,7 @@ def data_time_handler(browser):
     while (data_time == '--'):
         data_time = str((browser.find_element_by_id('lb_DataTime')).text)
         
-    return data_time
+    return datetime.strptime(data_time, '%Y-%m-%d %H:%M:%S')
 
 def main():
     browser = webdriver.Firefox()
