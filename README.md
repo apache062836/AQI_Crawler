@@ -1,1 +1,2 @@
-# taiwan_aqi_crawler
+# Taiwan AQI Crawler
+Developed under Anaconda IDE
